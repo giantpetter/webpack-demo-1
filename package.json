@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "watch": "webpack watch",
+    "watch": "webpack watch",
+    "serve": "webpack serve",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "preview": "http-server . -c-1"
@@ -13,8 +14,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "http-server": "^14.1.1",
+    "http-server": "14.1.1",
     "webpack": "5.88.2",
-    "webpack-cli": "5.1.4"
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
