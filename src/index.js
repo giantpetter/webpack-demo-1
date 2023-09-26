@@ -5,8 +5,10 @@ import axios from "axios";
 import "./style.css";
 import "./reset.css";
 import jpg from "./images/1.jpg";
+import Print from "./print";
 
 console.log(axios);
+console.log(Print);
 // console.log(vue);
 // console.log(React);
 // console.log(ReactDom);
