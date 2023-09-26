@@ -41,7 +41,7 @@ module.exports = {
     new WebpackManifestPlugin({}),
     new HtmlWebpackPlugin({
       title: "huan",
-      template: "./src/index.html",
+      template: "./public/index.html",
     }),
     new BundleAnalyzerPlugin(),
     new WebpackBar(),
