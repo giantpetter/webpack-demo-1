@@ -15,6 +15,7 @@ module.exports = {
     hints: false,
   },
   optimization: {
+    //运行时优化，分开runtime文件
     // moduleIds: "deterministic",
     runtimeChunk: "single",
     splitChunks: {
@@ -48,13 +49,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        include: path.resolve("src"),
-        use: [
-          "thread-loader",
-          "babel-loader",
-          // your expensive loader (e.g babel-loader)
-        ],
+        // Match `.js`, `.jsx`, `.ts` or `.tsx` files
+        test: /\.[jt]sx?$/,
+        loader: "esbuild-loader",
+        options: {
+          // JavaScript version to compile to
+          target: "es2015",
+        },
       },
       {
         test: /\.css$/i,
